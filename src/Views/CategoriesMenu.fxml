@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="712.0" prefWidth="1358.0" style="-fx-background-color: #002333;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.CategoriesMenuContoller">
+   <children>
+      <Text fill="WHITE" layoutX="80.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categorias" wrappingWidth="255.828125">
+         <font>
+            <Font name="Segoe UI Bold" size="40.0" />
+         </font>
+      </Text>
+      <Line endX="1010.0" fill="WHITE" layoutX="283.0" layoutY="149.0" startX="-203.0" stroke="WHITE" />
+      <Line endX="1010.0" fill="WHITE" layoutX="283.0" layoutY="692.0" startX="-203.0" stroke="WHITE" />
+      <Region layoutX="1234.0" layoutY="31.0" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #00ff84; -fx-border-radius: 20; -fx-background-radius: 15;" />
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="1244.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/user.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="clasificacionCombo" layoutX="988.0" layoutY="209.0" prefHeight="30.0" prefWidth="256.0" />
+      <TableView fx:id="CategoriesTable" layoutX="140.0" layoutY="209.0" prefHeight="423.0" prefWidth="455.0">
+        <columns>
+          <TableColumn fx:id="clasificacionCol" onEditCommit="#editClasif" prefWidth="149.0" text="Clasificación" />
+          <TableColumn fx:id="categoriaCol" onEditCommit="#editCat" prefWidth="157.0" text="Categoria" />
+            <TableColumn fx:id="subcategoriaCol" onEditCommit="#editSubCat" prefWidth="148.0" text="Sub-Categoria" />
+        </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="801.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clasificación:">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="801.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria:">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="791.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sub-Categoria:">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Text>
+      <TextField fx:id="categoriaInput" layoutX="988.0" layoutY="280.0" prefHeight="30.0" prefWidth="256.0" />
+      <TextField fx:id="subcategoriaInput" layoutX="988.0" layoutY="360.0" prefHeight="30.0" prefWidth="256.0" />
+      <Button fx:id="addButton" layoutX="1044.0" layoutY="452.0" mnemonicParsing="false" onAction="#onAdd" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #00ff84; -fx-background-radius: 15;" text="Agregar Categoria" textFill="#002333">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="editButton" layoutX="788.0" layoutY="452.0" mnemonicParsing="false" onAction="#onEdit" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFF787; -fx-background-radius: 15;" text="Editar Categoria" textFill="#002333">
+         <font>
+            <Font name="Segoe UI Bold" size="16.0" />
+         </font>
+      </Button>
+      <Text fx:id="CurrentUserName" fill="WHITE" layoutX="1069.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Axel Fernando" wrappingWidth="165.3525390625001">
+         <font>
+            <Font name="Segoe UI Bold" size="22.0" />
+         </font>
+      </Text>
+      <Text fx:id="CurrentUserRole" fill="WHITE" layoutX="1075.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Director de Finanzas" wrappingWidth="165.3525390625">
+         <font>
+            <Font name="Segoe UI Bold" size="15.0" />
+         </font>
+      </Text>
+      <Region fx:id="onBacking" layoutX="15.0" layoutY="20.0" onMouseClicked="#backToMenuReg" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #00ff84; -fx-border-radius: 30; -fx-background-radius: 30;" />
+      <ImageView fx:id="onBack" fitHeight="50.0" fitWidth="50.0" layoutX="15.0" layoutY="15.0" onMouseClicked="#backToMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/251451-200.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
